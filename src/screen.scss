@@ -75,31 +75,30 @@
   }
 }
 
+
+@mixin adjust-font-size-with-baseline-to($to-size, $lines: ceil($to-size / $base-line-height), $from-size: $base-font-size) {
+  @include adjust-font-size-to($to-size, $lines, $from-size);
+
+  $leader: ($lines * $base-line-height - $to-size) * 1em / $base-font-size;
+  $half-leader: $leader / 2;
+  $baseline-offset: abs(($half-leader - $base-half-leader) / $base-rhythm-unit);
+
+  @include leader($baseline-offset, $to-size);
+  @include trailer(-$baseline-offset, $to-size);
+}
+
 /* Styles -------------------------------------------------------------- */
 h1, h2, h3 { font-weight: bold; }
 h1 {
-  @include adjust-font-size-to(96px);
-  @include trailer(1, 96px);
+  @include adjust-font-size-with-baseline-to(96px);
 }
 
 h2 {
-  @include adjust-font-size-to(42.6667px);
-  @include trailer(1, 42.6667px);
+  @include adjust-font-size-with-baseline-to(42.6667px);
 }
 
 h3 {
-  @include adjust-font-size-to(26.6667px);
-
-  $h3-font-size: 26.6667px;
-  $h3-lines: ceil($h3-font-size / $base-line-height);
-  $h3-leader: ($h3-lines * $base-line-height - $h3-font-size) * 1em / $base-font-size;
-  $h3-half-leader: $h3-leader / 2;
-
-  @include leader(($h3-half-leader - $base-half-leader) / $base-rhythm-unit, $h3-font-size);
-  @include trailer(0 - ($h3-half-leader - $base-half-leader) / $base-rhythm-unit, $h3-font-size);
-  //@include trailer(1, 26.6667px);
-  //padding-top: 1.5em - ((26.6667em + 8em) / 26.6667);
-  //line-height: (26.6667em + 8em)em / 26.6667;
+  @include adjust-font-size-with-baseline-to(26.6667px);
 }
 
 #contact {
