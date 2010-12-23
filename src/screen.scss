@@ -85,17 +85,6 @@
   @include omega;
 }
 
-@mixin adjust-font-size-with-baseline-to($to-size, $lines: ceil($to-size / $base-line-height), $from-size: $base-font-size) {
-  @include adjust-font-size-to($to-size, $lines, $from-size);
-
-  $leader: ($lines * $base-line-height - $to-size) * 1em / $base-font-size;
-  $half-leader: $leader / 2;
-  $baseline-offset: abs(($half-leader - $base-half-leader) / $base-rhythm-unit);
-
-  @include leader($baseline-offset, $to-size);
-  @include trailer(-$baseline-offset, $to-size);
-}
-
 /* Styles -------------------------------------------------------------- */
 h1, h2, h3 { font-weight: bold; }
 h1 {
