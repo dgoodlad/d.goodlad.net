@@ -38,12 +38,11 @@
     @include omega(12);
 
     dt {
-      @include alpha(4);
       @include columns(1, 4);
-      text-align: right;
+      @include prefix(1, 4);
     }
     dd {
-      @include columns(3, 4);
+      @include columns(2, 4);
       @include omega(4);
     }
   }
