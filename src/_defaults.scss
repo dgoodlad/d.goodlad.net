@@ -75,28 +75,6 @@ a {
   &:focus {
     outline: thin dotted; } }
 
-/* Headings -------------------------------------------------------------- */
-
-h2, h3, h4, h5, h6 {
-  @include trailer; }
-
-h1 {
-  @include adjust-font-size-to(21px);
-  @include trailer(1, 21px); }
-
-h1, h2 {
-  @extend .allcaps; }
-
-h3 {
-  font-weight: bold; }
-
-h4 {
-  @extend .smallcaps;
-  text-transform: lowercase; }
-
-h5, h6 {
-  font-style: italic; }
-
 /* Inline -------------------------------------------------------------- */
 
 cite, em, dfn, address, i {
