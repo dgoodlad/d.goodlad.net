@@ -55,26 +55,35 @@
 }
 
 #writing {
-  @include alpha;
-  @include omega;
   @include columns(8);
-  @include suffix(4);
+  @include alpha;
 
   article {
-    @include full(8);
+    @include columns(8, 8);
+    @include omega(8);
 
-    header {
-      @include alpha(8);
-      @include columns(3, 8);
+    date {
+      @include columns(2, 8);
+      @include leader(1);
+    }
+
+    h3 {
+      @include columns(6, 8);
+      @include omega(8);
     }
 
     p {
-      @include columns(5, 8);
-      @include omega(8);
+      @include full(8);
+      @include prefix(2, 8);
     }
   }
 }
 
+#activity {
+  @include columns(3);
+  @include pad(1);
+  @include omega;
+}
 
 @mixin adjust-font-size-with-baseline-to($to-size, $lines: ceil($to-size / $base-line-height), $from-size: $base-font-size) {
   @include adjust-font-size-to($to-size, $lines, $from-size);
