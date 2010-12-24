@@ -110,3 +110,7 @@ h3 {
     p { @include leader(1); }
   }
 }
+
+#activity {
+  h2 { @include trailer(2, 42.6667px, 'padding'); }
+}
