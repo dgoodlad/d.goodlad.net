@@ -19,6 +19,10 @@ compile '/assets/fonts/*/' do
   nil
 end
 
+compile '/assets/javascript/*/' do
+  nil
+end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -37,6 +41,10 @@ route '/assets/images/*/' do
 end
 
 route '/assets/fonts/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+route '/assets/javascript/*/' do
   item.identifier.chop + '.' + item[:extension]
 end
 
