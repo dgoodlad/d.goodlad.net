@@ -25,7 +25,6 @@
   @include full;
 
   h1 {
-    @include alpha(12);
     @include columns(8, 12);
   }
 
