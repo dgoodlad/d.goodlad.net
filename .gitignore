@@ -1,3 +1,5 @@
 *.swp
 .sass-cache/*
-stylesheets/*.css
+output/*
+tmp/*
+Gemfile.lock
