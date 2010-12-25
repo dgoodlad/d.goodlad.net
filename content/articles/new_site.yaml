@@ -1,4 +1,7 @@
 kind: "article"
 created_at: "2010-12-25"
-title: "New site is up!"
-exerpt: "testing"
+title: "New site, based on nanoc and susy"
+exerpt: |
+  Finally, my site is back. I've built it using modern HTML5 techniques, and
+  with special attention paid to the typography. The technical bits consist of
+  nanoc and the compass plugin, susy.
