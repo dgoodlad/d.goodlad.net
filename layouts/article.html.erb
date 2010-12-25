@@ -40,7 +40,13 @@
           </address>
         </header>
 
-        <%= yield %>
+        <section class="content">
+          <%= yield %>
+        </section>
+
+        <footer>
+          &copy; <%= Time.parse(@item[:created_at]).year %> David Goodlad. All rights reserved.
+        </footer>
       </article>
     </div>
 

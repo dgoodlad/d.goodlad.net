@@ -1,5 +1,32 @@
 body.article {
   article {
-    @include full;
+    @include alpha;
+    @include columns(12);
+
+    header {
+      @include columns(12, 12);
+      @include omega(12);
+
+      h1 {
+        @include columns(8, 12);
+        @include adjust-font-size-with-baseline-to(36px);
+      }
+
+      date, address {
+        @include columns(3, 12);
+        @include prefix(1, 12);
+        @include omega(12);
+      }
+
+      date {
+        //@include leader(1);
+      }
+    }
+
+    section {
+      @include columns(8, 12);
+      @include suffix(4, 12);
+      @include omega(12);
+    }
   }
 }
