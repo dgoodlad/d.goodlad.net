@@ -1,0 +1,79 @@
+body.home {
+  #container > header {
+    @include full;
+
+    h1 {
+      @include columns(8, 12);
+    }
+
+    #contact {
+      margin-left: 0; margin-right: 0;
+      padding-left: 0; padding-right: 0;
+      dt, dd { margin: 0; padding: 0; border: 0; outline: 0; }
+
+      @include columns(4, 12);
+      @include omega(12);
+
+      dt {
+        @include columns(1, 4);
+        @include prefix(1, 4);
+      }
+      dd {
+        @include columns(2, 4);
+        @include omega(4);
+      }
+    }
+  }
+
+  #aboutme {
+    @include full;
+    @include suffix(4);
+  }
+
+  #writing {
+    @include columns(8);
+    @include alpha;
+
+    article {
+      @include columns(8, 8);
+      @include omega(8);
+
+      date {
+        @include columns(2, 8);
+        @include leader(1);
+      }
+
+      h3 {
+        @include columns(6, 8);
+        @include omega(8);
+      }
+
+      p {
+        @include full(8);
+        @include prefix(2, 8);
+      }
+    }
+  }
+
+  #activity {
+    @include columns(3);
+    @include pad(1);
+    @include omega;
+  }
+
+  #contact {
+    @include leader(1);
+  }
+
+  #writing {
+    @include leader(1);
+    article {
+      p { @include leader(1); }
+    }
+  }
+
+  #activity {
+    @include leader(1);
+    h2 { @include trailer(2, 42.6667px, 'padding'); }
+  }
+}
