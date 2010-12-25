@@ -23,6 +23,11 @@ compile '/assets/javascript/*/' do
   nil
 end
 
+compile '/articles/*/' do
+  filter :rdiscount
+  layout 'article'
+end
+
 compile '*' do
   filter :erb
   layout 'default'
