@@ -25,35 +25,17 @@
 
 <section id="writing">
   <h2>Recent writing</h2>
-  <article>
-    <date pubdate datetime="2010-12-25">12 Dec, 2010</date>
-    <h3>My Third Article</h3>
-    <p>
-      We need rest.  The spirit is willing, but the flesh is spongy and
-      bruised. Ah, the 'Breakfast Club' soundtrack!  I can't wait til
-      I'm old enough to feel ways about stuff! Bender, this is Fry's
-      decision... and he made it wrong. So it's time for us to interfere
-      in his life.
-    </p>
-  </article>
-  <article>
-    <date pubdate datetime="2010-12-25">12 Dec, 2010</date>
-    <h3>My Second Article</h3>
-    <p>
-      Leela, Bender, we're going grave robbing. It must be wonderful.
-      Now, now. Perfectly symmetrical violence never solved
-      anything.
-    </p>
-  </article>
-  <article>
-    <date pubdate datetime="2010-12-25">12 Dec, 2010</date>
-    <h3>My First Article</h3>
-    <p>
-      Bender, hurry! This fuel's expensive! [pause] Also, we're dying!
-      It's okay, Bender. I like cooking too. This is the worst part. The
-      calm before the battle.
-    </p>
-  </article>
+  <% sorted_articles.first(3).each do |article| %>
+    <article>
+      <date pubdate datetime="<%= article[:created_at] %>">
+        <%= Time.parse(article[:created_at]).strftime("%d %b, %Y") %>
+      </date>
+      <h3><%= article[:title] %></h3>
+      <p>
+        <%= article[:exerpt] %>
+      </p>
+    </article>
+  <% end %>
 </section>
 
 <section id="activity">
