@@ -13,7 +13,7 @@
 // or @extend it to apply multiple containers on your site.
 #container {
   @include container;
-  //@include show-grid("grid.png");
+  @include show-grid("grid.png");
 }
 
 // show-grid loads a 64+16x24 grid image by default
@@ -87,6 +87,7 @@
 h1, h2, h3 { font-weight: bold; }
 h1 {
   @include adjust-font-size-with-baseline-to(96px);
+  @include padding-leader(1, 96px);
   @include padding-trailer(1, 96px);
 }
 
