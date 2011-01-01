@@ -36,6 +36,20 @@
       </p>
     </article>
   <% end %>
+  <% (3 - sorted_articles.size).times do %>
+    <article class="fake">
+      <date pubdate datetime="2010-11-01">
+        <%= Time.parse("2010-11-01").strftime("%d %b, %Y") %>
+      </date>
+      <h3>Some Fake Article</h3>
+      <p>
+        We need rest.  The spirit is willing, but the flesh is spongy and
+        bruised. Ah, the 'Breakfast Club' soundtrack!  I can't wait til I'm
+        old enough to feel ways about stuff! Bender, this is Fry's decision...
+        and he made it wrong. So it's time for us to interfere in his life.
+      </p>
+    </article>
+  <% end %>
 </section>
 
 <section id="activity">

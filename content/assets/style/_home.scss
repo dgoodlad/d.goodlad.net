@@ -70,6 +70,9 @@ body.home {
     article {
       p { @include leader(1); }
     }
+    article.fake {
+      opacity: 0.5;
+    }
   }
 
   #activity {
