@@ -15,10 +15,6 @@ compile '/assets/images/*/' do
   nil
 end
 
-compile '/assets/fonts/*/' do
-  nil
-end
-
 compile '/assets/javascript/*/' do
   nil
 end
@@ -42,10 +38,6 @@ route '/assets/style/*/' do
 end
 
 route '/assets/images/*/' do
-  item.identifier.chop + '.' + item[:extension]
-end
-
-route '/assets/fonts/*/' do
   item.identifier.chop + '.' + item[:extension]
 end
 

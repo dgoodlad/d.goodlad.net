@@ -10,24 +10,26 @@
 }
 
 @font-face {
-  font-family: Roke1984;
-  src: url('/assets/fonts/ROKE1984.otf');
-}
-
-@font-face {
-  font-family: Crimson;
-  src: url('/assets/fonts/Crimson-Roman.otf');
-}
-
-@font-face {
-  font-family: Crimson;
-  src: url('/assets/fonts/Crimson-Semibold.otf');
+  font-family: 'Crimson';
+  src: url('/assets/fonts/crimson-semibold-webfont.eot');
+  src: local('☺'), url('/assets/fonts/crimson-semibold-webfont.woff') format('woff'), url('/assets/fonts/crimson-semibold-webfont.ttf') format('truetype'), url('/assets/fonts/crimson-semibold-webfont.svg#webfont0WmVoF2B') format('svg');
   font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: Crimson;
-  src: url('/assets/fonts/Crimson-Italic.otf');
+  font-family: 'Crimson';
+  src: url('/assets/fonts/crimson-italic-webfont.eot');
+  src: local('☺'), url('/assets/fonts/crimson-italic-webfont.woff') format('woff'), url('/assets/fonts/crimson-italic-webfont.ttf') format('truetype'), url('/assets/fonts/crimson-italic-webfont.svg#webfontHm7xDDGE') format('svg');
+  font-weight: normal;
   font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: 'Crimson';
+  src: url('/assets/fonts/crimson-roman-webfont.eot');
+  src: local('☺'), url('/assets/fonts/crimson-roman-webfont.woff') format('woff'), url('/assets/fonts/crimson-roman-webfont.ttf') format('truetype'), url('/assets/fonts/crimson-roman-webfont.svg#webfontfEaywW5f') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
