@@ -34,6 +34,9 @@
       <p>
         <%= article[:exerpt] %>
       </p>
+      <p>
+        <a href="<%= article.path %>">Read More</a>
+      </p>
     </article>
   <% end %>
   <% (3 - sorted_articles.size).times do %>
