@@ -20,13 +20,26 @@ are:
 * _Rules_: note the inclusion of compass and the susy plugin here, as well as
   the handling of asset files that don't need to be processed in any way.
 * _content/index.html_: nanoc provides some pre-built helper modules, one of
-  which, *Blogging*, gives access to a *sorted\_articles* method. It's used
+  which, *Blogging*, gives access to a *sorted_articles* method. It's used
   here to list exerpts from the three most recent articles.
 * _content/articles/*_ there are a pair of files here for each article. In the
-  yaml metadata file, note the kind and created\_at fields which are treated
+  yaml metadata file, note the *kind* and *created_at* fields which are treated
   specially by the *Blogging* helpers.
 
 
 ## susy
 
-The susy plugin is
+The susy plugin provides a number of sass mixins to lay out content in a grid
+and to maintain vertical rhythm even when changing fonts and sizes.
+
+I wrote a small mixin that changes the default behavior for font resizing.
+Instead of accepting CSS's normal vertical centering of text within its
+*line-height* property, I add an offset using margin-top to ensure that the
+text's baseline matches that of all the other text. This helps, for example,
+line up headings with regular text beside them.
+
+I've sent a [pull
+request](https://github.com/ericam/compass-susy-plugin/pull/11) to the author
+of susy to include this mixin in the plugin itself. There are a couple of
+issues that may prevent its inclusion, but if you're interested feel free to
+grab it from the site's sources and use it yourself.
