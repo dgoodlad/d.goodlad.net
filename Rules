@@ -24,6 +24,10 @@ compile '/articles/*/' do
   layout 'article'
 end
 
+compile 'htaccess' do
+  filter :erb
+end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -43,6 +47,10 @@ end
 
 route '/assets/javascript/*/' do
   item.identifier.chop + '.' + item[:extension]
+end
+
+route '/htaccess/' do
+  '/.htaccess'
 end
 
 route '*' do
