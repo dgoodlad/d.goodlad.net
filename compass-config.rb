@@ -8,5 +8,6 @@ images_dir = "assets/images"
 javascripts_dir = "assets/javascript"
 
 sass_options = {
-  :syntax => :scss
+  :syntax => :scss,
+  :cache_location => File.dirname(__FILE__) + '/.sass-cache'
 }
