@@ -5,6 +5,7 @@ gem 'adsf'
 gem 'nanoc', '~> 3.1.6'
 gem 'compass-susy-plugin', '~> 0.8.1'
 gem 'rdiscount', '~> 1.6'
+gem 'builder'
 
 gem 'growl'
 gem 'rb-fsevent'
