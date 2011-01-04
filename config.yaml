@@ -43,9 +43,11 @@ robots:
 # extension: extension of the output file, e.g. 'html' or 'xml'
 webmaster_tools:
   -
-    identifier:
-    content:
-    extension:
+    identifier: '/googled86ffdc54cec3fe0/'
+    content: 'google-site-verification: googled86ffdc54cec3fe0.html'
+    extension: 'html'
+
+analytics_account: 'UA-20544599-1'
 
 # Set up URL redirects in the .htacccess file to point old URLs to a new
 # location, thereby keeping your SEO-mojo intact and visitors happy.
