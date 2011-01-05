@@ -9,7 +9,7 @@ body.article {
 
       h1 {
         @include columns(8, 12);
-        @include adjust-font-size-with-baseline-to(36px);
+        @include adjust-font-size-with-baseline-to(41.9px);
       }
 
       date, address {
@@ -28,5 +28,19 @@ body.article {
       @include suffix(4, 12);
       @include omega(12);
     }
+
+    /* Exponential golden ratio growth:
+     * h(n) = $base-font-size * GOLDEN_RATIO ** ((5 - n) / 2)
+     *
+     * BASE = 16.0
+     * GOLD = 1.61803399
+     * def font_size(n)
+     *   BASE * GOLD ** ((5 - n) / 2.0)
+     * end
+     **/
+    h1 { @include adjust-font-size-with-baseline-to(41.9px); }
+    h2 { @include adjust-font-size-with-baseline-to(32.9px); }
+    h3 { @include adjust-font-size-with-baseline-to(25.9px); }
+    h4 { @include adjust-font-size-with-baseline-to(20.4px); }
   }
 }
