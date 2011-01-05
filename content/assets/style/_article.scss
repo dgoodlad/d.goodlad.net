@@ -1,5 +1,6 @@
 body.article {
   article {
+    @include leader(2);
     @include alpha;
     @include columns(12);
 
