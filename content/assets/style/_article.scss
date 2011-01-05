@@ -1,8 +1,8 @@
 body.article {
   article {
-    @include leader(2);
     @include alpha;
     @include columns(12);
+    @include leader(1);
 
     header {
       @include columns(12, 12);
