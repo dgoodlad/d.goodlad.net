@@ -43,5 +43,14 @@ body.article {
     h2 { @include adjust-font-size-with-baseline-to(32.9px); }
     h3 { @include adjust-font-size-with-baseline-to(25.9px); }
     h4 { @include adjust-font-size-with-baseline-to(20.4px); }
+
+    footer {
+      @include columns(8, 12);
+      @include suffix(4, 12);
+      @include omega(12);
+      @include leader(1);
+
+      @include adjust-font-size-with-baseline-to(12.58px);
+    }
   }
 }
