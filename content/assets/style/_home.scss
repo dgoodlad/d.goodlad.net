@@ -59,6 +59,8 @@ body.home {
     @include columns(3);
     @include pad(1);
     @include omega;
+
+    visibility: hidden;
   }
 
   #contact {
