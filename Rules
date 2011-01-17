@@ -43,7 +43,7 @@ preprocess do
   def create_robots_txt
     if @site.config[:robots]
       content = if @site.config[:robots][:default]
-        "User-agent: *\nDisallow: /assets\nAllow: /assets/images\nSitemap: /sitemap.xml"
+        "User-agent: *\nDisallow: /assets\nAllow: /assets/images\nSitemap: #{@site.config[:base_url]}/sitemap.xml"
       else
         [
           'User-Agent: *',
