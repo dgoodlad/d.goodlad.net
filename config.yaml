@@ -41,11 +41,11 @@ robots:
 # identifier: identifier of the output file, e.g. '/google12345/'
 # content: content of the file, e.g. 'aoa8202ns001'
 # extension: extension of the output file, e.g. 'html' or 'xml'
-webmaster_tools:
-  -
-    identifier: '/googled86ffdc54cec3fe0/'
-    content: 'google-site-verification: googled86ffdc54cec3fe0.html'
-    extension: 'html'
+#webmaster_tools:
+#  -
+#    identifier: '/googled86ffdc54cec3fe0/'
+#    content: 'google-site-verification: googled86ffdc54cec3fe0.html'
+#    extension: 'html'
 
 analytics_account: 'UA-20544599-1'
 

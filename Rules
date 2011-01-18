@@ -27,6 +27,7 @@ preprocess do
   end
 
   def create_webmaster_tools_authentications
+    return unless @site.config[:webmaster_tools]
     @site.config[:webmaster_tools].each do |file|
       next if file[:identifier].nil?
       content    = file.delete(:content)
