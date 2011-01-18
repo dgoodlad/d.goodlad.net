@@ -109,7 +109,7 @@ manager. Put the following into a file with the extension `.rb` (maybe
 
 Now if you run `babushka list`, you'll see something like:
 
-    $ babushka list | grep tree
+    $ babushka list tree
     babushka 'personal:tree.managed'
 
 Since the _personal_ source is the default, we can meet the dep like so:
