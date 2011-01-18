@@ -110,12 +110,16 @@ manager. Put the following into a file with the extension `.rb` (maybe
 Now if you run `babushka list`, you'll see something like:
 
     $ babushka list tree
+    √ Loaded 38 deps from /usr/local/babushka/deps.
+    √ Loaded 123 and skipped 1 deps from /Users/dave/.babushka/deps.
+
+    # personal (local) - /Users/dave/.babushka/deps
+    # 1 dep matching 'tree':
     babushka 'personal:tree.managed'
 
 Since the _personal_ source is the default, we can meet the dep like so:
 
     $ babushka tree.managed
-
     √ Loaded 38 deps from /usr/local/babushka/deps.
     √ Loaded 123 and skipped 1 deps from /Users/dave/.babushka/deps.
     tree.managed {
@@ -127,21 +131,22 @@ Since the _personal_ source is the default, we can meet the dep like so:
         build tools {
           llvm in path {
             xcode tools {
+              'gcc', 'g++', 'autoconf', 'make' & 'ld' run from /usr/bin.
             } √ xcode tools
           } √ llvm in path
         } √ build tools
       } √ homebrew
-      'tree' is missing.
-      not already met.
-      Homebrew package lists are 7 days old. Updating... done.
-      Installing tree via brew {
-        ==> Downloading ftp://mama.indstate.edu/linux/tree/tree-1.5.3.tgz
-        File already downloaded and cached to /Users/dave/Library/Caches/Homebrew
-        ==> /usr/bin/cc -O3 -w -pipe -o tree tree.c strverscmp.c
-        /usr/local/Cellar/tree/1.5.3: 4 files, 88K, built in 2 seconds
+      system doesn't have tree brew
+      meet {
+        Installing tree via brew {
+          ==> Downloading ftp://mama.indstate.edu/linux/tree/tree-1.5.3.tgz
+          File already downloaded and cached to /Users/dave/Library/Caches/Homebrew
+          ==> /usr/bin/cc -O3 -w -pipe -o tree tree.c strverscmp.c
+          /usr/local/Cellar/tree/1.5.3: 4 files, 88K, built in 2 seconds
+        }
       }
+      √ system has tree-1.5.3 brew
       'tree' runs from /usr/local/bin.
-      tree.managed met.
     } √ tree.managed
 
 ## Collecting Deps
