@@ -11,6 +11,7 @@ body.article {
       h1 {
         @include columns(8, 12);
         @include adjust-font-size-with-baseline-to(41.9px);
+        @include padding-trailer(1, 41.9px);
       }
 
       date, address {
