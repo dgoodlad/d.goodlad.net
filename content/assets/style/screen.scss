@@ -25,8 +25,8 @@
 /* Styles -------------------------------------------------------------- */
 h1, h2, h3 { font-weight: bold; }
 h1 {
-  @include adjust-font-size-with-baseline-to(96px);
-  @include padding-trailer(1, 96px);
+  @include adjust-font-size-to(92px);
+  @include padding-leader(0.6, 92px);
 }
 
 h2 {
