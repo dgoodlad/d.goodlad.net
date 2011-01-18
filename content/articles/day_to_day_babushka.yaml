@@ -1,6 +1,6 @@
 kind: "article"
 created_at: "2011-01-19"
-title: "Babushka for Home"
+title: "Day-to-day Babushka"
 exerpt: |
   Babushka may be described as a tool for "sysadmin", but its usefulness doesn't
   stop at managing servers. I use Babushka to manage the software and
