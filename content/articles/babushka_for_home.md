@@ -15,10 +15,10 @@ state of a given 'dep', and how to meet that dep.
 
     dep 'ip forwarding enabled' do
       met? {
-	File.read('/proc/sys/net/ipv4/ip_forward') == '1'
+        File.read('/proc/sys/net/ipv4/ip_forward') == '1'
       }
       meet {
-	`echo 1 > /proc/sys/net/ipv4/ip_forward`
+        `echo 1 > /proc/sys/net/ipv4/ip_forward`
       }
     end
 
@@ -120,25 +120,25 @@ Since the _personal_ source is the default, we can meet the dep like so:
     √ Loaded 123 and skipped 1 deps from /Users/dave/.babushka/deps.
     tree.managed {
       homebrew {
-	homebrew binary in place {
-	  homebrew installed {
-	  } √ homebrew installed
-	} √ homebrew binary in place
-	build tools {
-	  llvm in path {
-	    xcode tools {
-	    } √ xcode tools
-	  } √ llvm in path
-	} √ build tools
+        homebrew binary in place {
+          homebrew installed {
+          } √ homebrew installed
+        } √ homebrew binary in place
+        build tools {
+          llvm in path {
+            xcode tools {
+            } √ xcode tools
+          } √ llvm in path
+        } √ build tools
       } √ homebrew
       'tree' is missing.
       not already met.
       Homebrew package lists are 7 days old. Updating... done.
       Installing tree via brew {
-	==> Downloading ftp://mama.indstate.edu/linux/tree/tree-1.5.3.tgz
-	File already downloaded and cached to /Users/dave/Library/Caches/Homebrew
-	==> /usr/bin/cc -O3 -w -pipe -o tree tree.c strverscmp.c
-	/usr/local/Cellar/tree/1.5.3: 4 files, 88K, built in 2 seconds
+        ==> Downloading ftp://mama.indstate.edu/linux/tree/tree-1.5.3.tgz
+        File already downloaded and cached to /Users/dave/Library/Caches/Homebrew
+        ==> /usr/bin/cc -O3 -w -pipe -o tree tree.c strverscmp.c
+        /usr/local/Cellar/tree/1.5.3: 4 files, 88K, built in 2 seconds
       }
       'tree' runs from /usr/local/bin.
       tree.managed met.
@@ -157,9 +157,9 @@ looks something like this:
       requires 'orion osx apps installed'
 
       requires 'macvim',
-	       'tmux',
-	       'ack.managed',
-	       'tree.managed'
+               'tmux',
+               'ack.managed',
+               'tree.managed'
 
       requires 'rvm'
       requires 'nvm'
@@ -168,10 +168,10 @@ looks something like this:
     dep 'orion osx apps installed' do
       # Social, Web, Media etc.
       requires 'Google Chrome.app',
-	       'Echofon.app',
-	       'Skype.app',
-	       'LimeChat.app',
-	       'Airfoil.app'
+               'Echofon.app',
+               'Skype.app',
+               'LimeChat.app',
+               'Airfoil.app'
       # ... and lots more
     end
 
@@ -227,7 +227,7 @@ best thing to do in these cases. For example:
       source 'http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-6.9.0.pkg.zip'
       met? {
         # Test that the prefpane is in the right place.
-	'/Library/PreferencePanes/KeyRemap4MacBook.prefPane'.p.exist?
+        '/Library/PreferencePanes/KeyRemap4MacBook.prefPane'.p.exist?
       }
     end
 
