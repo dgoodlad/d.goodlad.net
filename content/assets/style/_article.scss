@@ -44,8 +44,8 @@ body.article {
     h3 { @include adjust-font-size-with-baseline-to(25.9px); }
     h4 { @include adjust-font-size-with-baseline-to(20.4px); }
 
-    pre {
-      @include adjust-font-size-to(12px);
+    code {
+      @include adjust-font-size-to(14px);
     }
 
     footer {
