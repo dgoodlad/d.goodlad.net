@@ -221,6 +221,14 @@ To override the check for binaries, use the `provides` method:
       provides 'erlc', 'erl'
     end
 
+`provides` isn't some special magic method in Babushka. Instead, it's a
+convention adopted by many of the templates that in their definition they call
+`accepts_list_for :provides`. This tells Babushka that deps implementing that
+template can override the default list, like I've shown in the above
+examples. If you're interested (and you should be once you start writing lots of
+deps and your own templates), have a look at the [source for the _managed_
+template](https://github.com/benhoskings/babushka/blob/master/deps/templates/managed.rb#L49).
+
 ### Non-Applications
 
 When you use the _installer_ template to install OSX pkg/mpkg files, you're not
