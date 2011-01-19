@@ -38,7 +38,7 @@
       </p>
     </article>
   <% end %>
-  <% (3 - sorted_articles.size).times do %>
+  <% (0 - sorted_articles.size).times do %>
     <article class="fake">
       <date pubdate datetime="2010-11-01">
         <%= Time.parse("2010-11-01").strftime("%d %b, %Y") %>
