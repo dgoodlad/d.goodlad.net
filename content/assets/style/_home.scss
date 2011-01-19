@@ -70,6 +70,12 @@ body.home {
   #writing {
     @include leader(1);
     article {
+      h3 a {
+        color: $base;
+        text-decoration: none;
+        &:focus, &:hover, &:active {
+          color: complement($alt); }
+      }
       p { @include leader(1); }
     }
     article.fake {

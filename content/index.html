@@ -29,7 +29,7 @@
       <date pubdate datetime="<%= article[:created_at] %>">
         <%= Time.parse(article[:created_at]).strftime("%d %b, %Y") %>
       </date>
-      <h3><%= article[:title] %></h3>
+      <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
       <p>
         <%= article[:exerpt] %>
       </p>
