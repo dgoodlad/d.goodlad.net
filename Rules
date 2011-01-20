@@ -83,8 +83,8 @@ end
 compile %r{^/(google|robots|404|500|assets)} do
 end
 
-# Sitemap and htaccess do get filtered with erb, but get no layout.
-compile %r{^/(sitemap|htaccess)/$} do
+# Sitemap and apache.conf do get filtered with erb, but get no layout.
+compile %r{^/(sitemap|apache)/$} do
   filter :erb
 end
 
@@ -101,8 +101,8 @@ route '/assets/style/*/' do
   item.identifier.chop + '.css'
 end
 
-route '/htaccess/' do
-  '/.htaccess'
+route '/apache/' do
+  '/apache.conf'
 end
 
 route %r{^/(google.*|assets/.*|sitemap|robots|atom)/$} do
