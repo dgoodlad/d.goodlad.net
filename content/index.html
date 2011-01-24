@@ -25,6 +25,7 @@
 <section id="writing">
   <h2>Recent writing</h2>
   <% sorted_articles.first(3).each do |article| %>
+    <% next if Date.today - Time.parse(article[:created_at]).to_date > 365 %>
     <article>
       <date pubdate datetime="<%= article[:created_at] %>">
         <%= Time.parse(article[:created_at]).strftime("%d %b, %Y") %>
