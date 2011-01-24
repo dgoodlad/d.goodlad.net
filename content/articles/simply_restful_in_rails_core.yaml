@@ -1,0 +1,13 @@
+kind: "article"
+created_at: "2006-08-02"
+old_permalink: "/2006/08/02/simply_restful-in-rails-core"
+title: "simply_restful in Rails Core"
+hide_exerpt: true
+exerpt: |
+  Now that Rick Olson has integrated the functionality of the simply_restful
+  plugin with Rails Core, the interest in RESTful design in Rails is bound to
+  increase. I’ve found that most of the documentation is rather out-dated, and
+  that it takes a bit of digging to figure out exactly what syntax you should be
+  using for your named routes, url generation, etc. Differences between the
+  simply_restful README, DHH’s presentation from RailsConf, and various random
+  blog posts, it can get rather confusing!  Let’s clear that up, shall we?
