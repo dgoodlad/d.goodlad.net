@@ -13,4 +13,6 @@ gem 'guard'
 gem 'guard-bundler'
 gem 'guard-nanoc'
 
+gem 'nokogiri'
+
 # vim:ft=ruby

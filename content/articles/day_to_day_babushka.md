@@ -50,7 +50,7 @@ Now that you're convinced that this could be a good idea, you should probably gi
 
 I'll assume that you're running on a platform with built-in managed package support in Babushka:
 
-* OSX 10.5+ (uses [Homebrew](http://github.com/mxcl/homebrew))
+* OSX 10.5+ (uses [Homebrew](https://github.com/mxcl/homebrew))
 * Debian, Ubuntu, or other apt-based Linux distributions
 
 ### Installing Babushka
@@ -256,11 +256,11 @@ someone who's having the same issue, and failing that you can always ask your
 own question!
 
 * My entire set of deps is available publicly on Github:
-[github.com/dgoodlad/babushka-deps](http://github.com/dgoodlad/babushka-deps/)
+[github.com/dgoodlad/babushka-deps](https://github.com/dgoodlad/babushka-deps)
 
 * Ben Hoskings, the author and active maintainer of Babushka, also has his deps
 available publicly:
-[github.com/benhoskings/babushka-deps](http://github.com/benhoskings/babushka-deps/)
+[github.com/benhoskings/babushka-deps](https://github.com/benhoskings/babushka-deps)
 
 * For more details about Babushka, see the
 [readme on Github](https://github.com/benhoskings/babushka#readme) and the

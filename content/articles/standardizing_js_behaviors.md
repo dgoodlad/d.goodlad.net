@@ -25,7 +25,7 @@ adapt these ideas to your needs.
 
 ## Defining a Standard Behavior
 
-As described in my previous article [1], here is the basic definition of the base
+As described in my [previous article<sup>1</sup>](#fn1), here is the basic definition of the base
 StandardBehavior class:
 
     StandardBehavior = function() {};
@@ -312,7 +312,7 @@ Standard behaviors are really a simple application of the DRY principle. As
 such, they help both you as the developer by making your mounds of code more
 maintainable (and readable to boot!).
 
-Conclusions
+## Conclusions
 
 Hopefully some of you get some use out of this far more in-depth article. I find
 these techniques have not only saved me a ton of headaches, but they’ve saved my
@@ -322,4 +322,6 @@ Please feel free to leave feedback via the comment system here; I welcome any
 constructive criticism, of course! I can also be contacted via e-mail at
 d[nospam]goodlad@gmail.com.
 
-[1]: I have modified the base StandardBehavior class from the original version to make it fit the general case a little better
+## Footnotes
+
+<p id="fn1">1: I have modified the base StandardBehavior class from the original version to make it fit the general case a little better</p>

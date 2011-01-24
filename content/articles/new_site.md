@@ -14,7 +14,7 @@ hurdle when you first start using it.
 Since there is no pre-defined structure for your nanoc site, it can be
 daunting to figure out where to start on a new project. If you're interested,
 my site's source is available on
-[Github](http://github.com/dgoodlad/d.goodlad.net). The interesting files
+[Github](https://github.com/dgoodlad/d.goodlad.net). The interesting files
 are:
 
 * _Rules_: note the inclusion of compass and the susy plugin here, as well as
