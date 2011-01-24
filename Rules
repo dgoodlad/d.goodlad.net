@@ -61,6 +61,18 @@ preprocess do
     end
   end
 
+  def create_archives
+    archive_template = @items.find { |i| i.identifier == '/archive_template/' }
+    article_years.each do |year|
+      @items << Nanoc3::Item.new(
+        archive_template.raw_content,
+        { :extension => 'erb', :year => year },
+        "/archives/#{year}"
+      )
+    end
+  end
+
+  create_archives
   create_robots_txt
   create_webmaster_tools_authentications
   create_sitemap
@@ -111,6 +123,14 @@ end
 
 route %r{^/(google.*|assets/.*|sitemap|robots|atom)/$} do
   item.identifier.chop + '.' + item[:extension]
+end
+
+route '/archives/' do
+  item.identifier + 'index.html'
+end
+
+route '/archives/*/' do
+  item.identifier.chop + '.html'
 end
 
 route '/feed/' do

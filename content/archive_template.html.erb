@@ -1,0 +1,24 @@
+---
+is_hidden: true
+---
+
+<header>
+  <h1>Archives</h1>
+  <h2><%= @item[:year] %></h2>
+</header>
+
+<% articles = articles_by_year[@item[:year]] %>
+<% articles.sort_by { |a| Time.parse(a[:created_at]) }.reverse.each do |article| %>
+  <article>
+    <date pubdate datetime="<%= article[:created_at] %>">
+      <%= Time.parse(article[:created_at]).strftime("%d %b, %Y") %>
+    </date>
+    <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
+    <p>
+      <%= article[:exerpt] %>
+    </p>
+    <p>
+      <a href="<%= article.path %>">Read More</a>
+    </p>
+  </article>
+<% end if articles %>
