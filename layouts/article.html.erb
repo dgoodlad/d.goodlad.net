@@ -40,9 +40,11 @@
             posted by
             <a href="/">David Goodlad</a>
           </address>
-          <p class="summary">
-            <%= @item[:exerpt] %>
-          </p>
+          <% unless @item[:hide_exerpt] %>
+            <p class="summary">
+              <%= @item[:exerpt] %>
+            </p>
+          <% end %>
         </header>
 
         <section class="content">
