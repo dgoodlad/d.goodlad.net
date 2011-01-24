@@ -1,81 +1,29 @@
-<!doctype html>
+<% render 'default', { :body_class => 'article',
+                       :title => @item[:title],
+                       :description => @item[:exerpt] } do %>
+  <article>
+    <header>
+      <h1><%= @item[:title] %></h1>
+      <date pubdate datetime="<%= @item[:created_at] %>">
+        posted on <%= Time.parse(@item[:created_at]).strftime("%d %b, %Y") %>
+      </date>
+      <address>
+        posted by
+        <a href="/">David Goodlad</a>
+      </address>
+      <% unless @item[:hide_exerpt] %>
+        <p class="summary">
+          <%= @item[:exerpt] %>
+        </p>
+      <% end %>
+    </header>
 
-<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
+    <section class="content">
+      <%= yield %>
+    </section>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <title><%= @item[:title] %> - David Goodlad</title>
-    <meta name="description" content="<%= @item[:exerpt] %>">
-    <meta name="author" content="David Goodlad <david@goodlad.ca>">
-
-    <link rel="alternate" type="application/atom+xml" href="<%= @site.config[:base_url] + '/feed.xml' %>">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="/assets/images/favicon.png">
-    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
-
-    <link rel="stylesheet" href="/assets/style/screen.css" media="screen, projection">
-    <% if false # TODO %>
-    <link rel="stylesheet" href="/assets/style/print.css" media="print">
-    <link rel="stylesheet" href="/assets/style/ie.css" media="screen, projection">
-    <% end %>
-
-    <script src="/assets/javascript/libs/modernizr-1.6.min.js"></script>
-  </head>
-
-  <body class="article">
-    <div id="container">
-      <article>
-        <header>
-          <h1><%= @item[:title] %></h1>
-          <date pubdate datetime="<%= @item[:created_at] %>">
-            posted on <%= Time.parse(@item[:created_at]).strftime("%d %b, %Y") %>
-          </date>
-          <address>
-            posted by
-            <a href="/">David Goodlad</a>
-          </address>
-          <% unless @item[:hide_exerpt] %>
-            <p class="summary">
-              <%= @item[:exerpt] %>
-            </p>
-          <% end %>
-        </header>
-
-        <section class="content">
-          <%= yield %>
-        </section>
-
-        <footer>
-          &copy; <%= Time.parse(@item[:created_at]).year %> David Goodlad. All rights reserved.
-        </footer>
-      </article>
-    </div>
-
-    <% if false %>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="/assets/javascript/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
-    <% end %>
-
-    <% if @site.config[:analytics_account] %>
-    <script>
-      var _gaq = [['_setAccount', '<%= @site.config[:analytics_account] %>'], ['_trackPageview']];
-      (function(d, t) {
-          var g = d.createElement(t),
-              s = d.getElementsByTagName(t)[0];
-          g.async = true;
-          g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g, s);
-      })(document, 'script');
-    </script>
-    <% end %>
-  </body>
-</html>
-
+    <footer>
+      &copy; <%= Time.parse(@item[:created_at]).year %> David Goodlad. All rights reserved.
+    </footer>
+  </article>
+<% end %>

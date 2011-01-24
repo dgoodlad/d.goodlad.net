@@ -106,7 +106,7 @@ end
 
 compile '*' do
   filter :erb
-  layout 'default'
+  layout 'home'
 end
 
 route '/assets/style/_*/' do
