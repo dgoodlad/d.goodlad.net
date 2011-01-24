@@ -2,6 +2,7 @@ kind: "article"
 created_at: "2007-08-12"
 old_permalink: "/2007/08/12/dd-the-dying-disk-s-best-friend"
 title: "dd: The Dying Disk's Best Friend"
+hide_exerpt: true
 exerpt: |
   If you’ve ever had a hard drive die, whether slowly or spontaneously, you know
   the horror of thinking about how you’re actually going to restore all those
