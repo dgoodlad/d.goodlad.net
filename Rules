@@ -88,6 +88,10 @@ compile %r{^/(sitemap|apache)/$} do
   filter :erb
 end
 
+compile '/feed/' do
+  filter :erb
+end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -107,6 +111,10 @@ end
 
 route %r{^/(google.*|assets/.*|sitemap|robots|atom)/$} do
   item.identifier.chop + '.' + item[:extension]
+end
+
+route '/feed/' do
+  '/feed.xml'
 end
 
 route '*' do
