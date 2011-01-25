@@ -47,8 +47,9 @@ article.writing.exerpt-only {
   header {
     @include full(8);
 
-    date {
+    p { /* Date */
       @include columns(2, 8);
+      @include prefix(0, 8);
       @include leader(1);
     }
 
