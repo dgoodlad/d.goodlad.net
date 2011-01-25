@@ -17,7 +17,6 @@ def articles_by_year
       yield [year, grouped[year]]
     end
   end
-  p grouped
   grouped
 end
 

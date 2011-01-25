@@ -1,0 +1,16 @@
+<% render 'default', { :body_class => 'archives',
+                       :title => @item[:title],
+                       :description => @item[:exerpt] } do %>
+  <header>
+    <h1>
+      <span class="not-year">David Goodlad's writing from</span><br>
+      <span class="year"><%= @item[:year] %></span>
+    </h1>
+  </header>
+
+  <section>
+    <% articles_by_year[@item[:year]].each do |article| %>
+      <%= render 'article_exerpt', { :article => article } %>
+    <% end %>
+  </section>
+<% end %>

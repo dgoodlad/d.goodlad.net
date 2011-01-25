@@ -14,7 +14,7 @@
 #container {
   @include container;
   @include leader(1);
-  //@include show-grid("grid.png");
+  /*@include show-grid("grid.png");*/
 }
 
 // show-grid loads a 64+16x24 grid image by default
@@ -39,7 +39,37 @@ h3 {
   @include padding-trailer(1, 26.6667px);
 }
 
+article.writing.exerpt-only {
+  @include columns(8);
+  @include suffix(4);
+  @include omega;
+
+  date {
+    @include columns(2, 8);
+    @include leader(1);
+  }
+
+  h3 {
+    @include columns(6, 8);
+    @include omega(8);
+  }
+
+  p {
+    @include full(8);
+    @include prefix(2, 8);
+    @include leader(1);
+  }
+
+  h3 a {
+    color: $base;
+    text-decoration: none;
+    &:focus, &:hover, &:active {
+      color: complement($alt); }
+  }
+}
+
 /* Page-specific imports ----------------------------------------------- */
 
 @import "home";
 @import "article";
+@import "archives";

@@ -104,6 +104,11 @@ compile '/feed/' do
   filter :erb
 end
 
+compile '/archives/*/' do
+  filter :erb
+  layout 'archives'
+end
+
 compile '*' do
   filter :erb
   layout 'home'
@@ -123,10 +128,6 @@ end
 
 route %r{^/(google.*|assets/.*|sitemap|robots|atom)/$} do
   item.identifier.chop + '.' + item[:extension]
-end
-
-route '/archives/' do
-  item.identifier + 'index.html'
 end
 
 route '/archives/*/' do

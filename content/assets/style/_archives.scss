@@ -1,0 +1,33 @@
+body.archives {
+  #container > header {
+    @include columns(4);
+    @include prefix(8);
+    @include alpha;
+    @include omega;
+
+    h1 {
+      @include columns(4, 4);
+      @include omega(4);
+
+      .not-year {
+        @include adjust-font-size-to(16px, 1, 92px);
+        font-weight: normal;
+        font-style: italic;
+      }
+      .year {
+      }
+    }
+  }
+
+  section {
+    @include columns(8);
+    @include suffix(4);
+    @include omega;
+
+    article.writing.exerpt-only {
+      @include columns(8, 8);
+      @include suffix(0, 8);
+      @include omega(8);
+    }
+  }
+}

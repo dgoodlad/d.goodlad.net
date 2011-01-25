@@ -34,24 +34,10 @@ body.home {
     @include columns(8);
     @include alpha;
 
-    article {
+    article.writing.exerpt-only {
       @include columns(8, 8);
+      @include suffix(0, 8);
       @include omega(8);
-
-      date {
-        @include columns(2, 8);
-        @include leader(1);
-      }
-
-      h3 {
-        @include columns(6, 8);
-        @include omega(8);
-      }
-
-      p {
-        @include full(8);
-        @include prefix(2, 8);
-      }
     }
   }
 

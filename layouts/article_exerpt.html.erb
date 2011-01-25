@@ -1,0 +1,12 @@
+<article class="writing exerpt-only">
+  <date pubdate datetime="<%= @article[:created_at] %>">
+    <%= Time.parse(@article[:created_at]).strftime("%d %b, %Y") %>
+  </date>
+  <h3><a href="<%= @article.path %>"><%= @article[:title] %></a></h3>
+  <p>
+    <%= @article[:exerpt] %>
+  </p>
+  <p>
+    <a href="<%= @article.path %>">Read More</a>
+  </p>
+</article>
