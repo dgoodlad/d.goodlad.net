@@ -61,21 +61,6 @@ preprocess do
     end
   end
 
-  def create_archives
-    archive_template = @items.find { |i| i.identifier == '/archive_template/' }
-    article_years.each do |year|
-      lastmod = articles_by_year[year].map { |a| a.mtime }.max
-      freq = (year == Time.now.year ? 'DAILY' : 'YEARLY')
-      priority = 0.5
-      @items << Nanoc3::Item.new(
-        archive_template.raw_content,
-        { :extension => 'erb', :year => year, :updatefreq => freq, :priority => priority },
-        "/archives/#{year}",
-        { :mtime => lastmod }
-      )
-    end
-  end
-
   def assign_article_priorities
     two_months = 30 * 24 * 60 * 60
     six_months = two_months * 3
@@ -94,7 +79,7 @@ preprocess do
   end
 
   assign_article_priorities
-  create_archives
+  create_archive_items
   create_robots_txt
   create_webmaster_tools_authentications
   create_sitemap
