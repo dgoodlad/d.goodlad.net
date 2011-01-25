@@ -44,14 +44,18 @@ article.writing.exerpt-only {
   @include suffix(4);
   @include omega;
 
-  date {
-    @include columns(2, 8);
-    @include leader(1);
-  }
+  header {
+    @include full(8);
 
-  h3 {
-    @include columns(6, 8);
-    @include omega(8);
+    date {
+      @include columns(2, 8);
+      @include leader(1);
+    }
+
+    h3 {
+      @include columns(6, 8);
+      @include omega(8);
+    }
   }
 
   p {
