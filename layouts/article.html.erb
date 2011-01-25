@@ -4,9 +4,9 @@
   <article>
     <header>
       <h1><%= @item[:title] %></h1>
-      <date pubdate datetime="<%= @item[:created_at] %>">
+      <time pubdate datetime="<%= @item[:created_at] %>">
         posted on <%= Time.parse(@item[:created_at]).strftime("%d %b, %Y") %>
-      </date>
+      </time>
       <address>
         posted by
         <a href="/">David Goodlad</a>

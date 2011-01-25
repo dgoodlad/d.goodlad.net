@@ -1,8 +1,8 @@
 <article class="writing exerpt-only">
   <header>
-    <p><date pubdate datetime="<%= @article[:created_at] %>">
+    <p><time pubdate datetime="<%= @article[:created_at] %>">
       <%= Time.parse(@article[:created_at]).strftime("%d %b, %Y") %>
-    </date></p>
+    </time></p>
     <h3><a href="<%= @article.path %>"><%= @article[:title] %></a></h3>
   </header>
   <p>
