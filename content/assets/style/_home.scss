@@ -61,12 +61,6 @@ body.home {
     .archived { visibility: hidden; }
 
     article {
-      h3 a {
-        color: $base;
-        text-decoration: none;
-        &:focus, &:hover, &:active {
-          color: complement($alt); }
-      }
       p { @include leader(1); }
     }
 
