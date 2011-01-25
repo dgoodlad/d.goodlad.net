@@ -36,6 +36,13 @@ description: |
     <% next if Date.today - Time.parse(article[:created_at]).to_date > 365 %>
     <%= render 'article_exerpt', { :article => article } %>
   <% end %>
+
+  <h2>Archived writing</h2>
+  <ul>
+    <% archive_pages.each do |archive| %>
+      <li><a href="<%= archive.path %>"><%= archive[:year] %></a></li>
+    <% end %>
+  </ul>
 </section>
 
 <section id="activity">

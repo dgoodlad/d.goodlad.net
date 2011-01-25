@@ -34,7 +34,7 @@ body.home {
     @include columns(8);
     @include alpha;
 
-    article.writing.exerpt-only {
+    article.writing.exerpt-only, h2, ul {
       @include columns(8, 8);
       @include suffix(0, 8);
       @include omega(8);
@@ -54,7 +54,10 @@ body.home {
   }
 
   #writing {
-    @include leader(1);
+    h2 {
+      @include leader(1, 42.6667px);
+    }
+
     article {
       h3 a {
         color: $base;
@@ -64,8 +67,9 @@ body.home {
       }
       p { @include leader(1); }
     }
-    article.fake {
-      opacity: 0.5;
+
+    ul {
+      @include leader(1);
     }
   }
 
