@@ -1,13 +1,12 @@
 module Dgoodlad
   module Archives
     def create_archive_items
-      archive_template = @items.find { |i| i.identifier == '/archive_template/' }
       article_years.each do |year|
         lastmod = articles_by_year[year].map { |a| a.mtime }.max
         freq = (year == Time.now.year ? 'DAILY' : 'YEARLY')
         priority = 0.5
         @items << Nanoc3::Item.new(
-          archive_template.raw_content,
+          '',
           { :extension => 'erb', :year => year, :updatefreq => freq, :priority => priority },
           "/archives/#{year}",
           { :mtime => lastmod }
