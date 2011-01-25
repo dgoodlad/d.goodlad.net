@@ -141,6 +141,10 @@ route '/archives/*/' do
   item.identifier.chop + '.html'
 end
 
+route '/archive_template/' do
+  nil
+end
+
 route '/feed/' do
   '/feed.xml'
 end
