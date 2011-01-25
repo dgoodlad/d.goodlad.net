@@ -14,7 +14,7 @@
 #container {
   @include container;
   @include leader(1);
-  /*@include show-grid("grid.png");*/
+  //@include show-grid("grid.png");
 }
 
 // show-grid loads a 64+16x24 grid image by default

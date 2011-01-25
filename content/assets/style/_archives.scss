@@ -1,28 +1,51 @@
 body.archives {
   #container > header {
-    @include columns(4);
-    @include prefix(8);
-    @include alpha;
+    @include columns(3);
+    @include prefix(1);
     @include omega;
 
     h1 {
-      @include columns(4, 4);
-      @include omega(4);
+      @include columns(3, 3);
+      @include omega(3);
+      @include adjust-font-size-to(16px);
+
+      a { text-decoration: none; color: $base; }
+      a:hover, a:focus, a:active { color: complement($alt); }
 
       .not-year {
-        @include adjust-font-size-to(16px, 1, 92px);
         font-weight: normal;
         font-style: italic;
       }
       .year {
+        @include adjust-font-size-to(92px);
+      }
+    }
+
+    nav {
+      @include columns(3, 3);
+      @include omega(3);
+      @include leader(1);
+
+      h2 {
+        @include adjust-font-size-with-baseline-to(16px);
+        @include padding-trailer(0);
+        font-weight: normal;
+        font-style: italic;
+      }
+      ul {
+        list-style: none;
+        margin-left: 0;
+        li {
+          font-weight: bold;
+        }
       }
     }
   }
 
   section {
     @include columns(8);
-    @include suffix(4);
-    @include omega;
+    @include alpha;
+    @include leader(5);
 
     article.writing.exerpt-only {
       @include columns(8, 8);

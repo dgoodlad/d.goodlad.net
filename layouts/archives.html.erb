@@ -3,9 +3,19 @@
                        :description => @item[:exerpt] } do %>
   <header>
     <h1>
-      <span class="not-year">David Goodlad's writing from</span><br>
-      <span class="year"><%= @item[:year] %></span>
+      <span class="not-year"><a href="/">David Goodlad</a>'s writing from</span><br>
+      <span class="year"><a href="<%= @item.path %>"><%= @item[:year] %></a></span>
     </h1>
+    <nav>
+      <h2>Other years:</h2>
+      <ul>
+        <% archive_pages.each do |archive| %>
+          <% next if archive == @item %>
+          <li><a href="<%= archive.path %>"><%= archive[:year] %></a></li>
+        <% end %>
+      </ul>
+      <p><a href="/">Home</a></p>
+    </nav>
   </header>
 
   <section>

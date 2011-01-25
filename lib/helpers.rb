@@ -23,3 +23,7 @@ end
 def article_years
   articles.map { |a| Time.parse(a[:created_at]).year }.uniq.sort
 end
+
+def archive_pages
+  @items.select { |i| i.identifier =~ %r(^/archives/\d{4}) }.sort_by { |i| i[:year] }
+end
