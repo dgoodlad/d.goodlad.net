@@ -38,8 +38,8 @@ priority: 1.0
     <%= render 'article_exerpt', { :article => article } %>
   <% end %>
 
-  <h2>Archived writing</h2>
-  <ul>
+  <h2 class="archived">Archived writing</h2>
+  <ul class="archived">
     <% archive_pages.each do |archive| %>
       <li><a href="<%= archive.path %>"><%= archive[:year] %></a></li>
     <% end %>

@@ -58,6 +58,8 @@ body.home {
       @include leader(1, 42.6667px);
     }
 
+    .archived { visibility: hidden; }
+
     article {
       h3 a {
         color: $base;
