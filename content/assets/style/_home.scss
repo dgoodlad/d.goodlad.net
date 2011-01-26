@@ -34,6 +34,37 @@ body.home {
     @include columns(8);
     @include alpha;
 
+    > header {
+      @include columns(8, 8);
+      @include omega(8);
+
+      h2 {
+        @include columns(2, 8);
+      }
+
+      nav {
+        @include columns(6, 8);
+        @include omega(8);
+        @include leader(1);
+
+        text-align: right;
+
+        p {
+          font-style: italic;
+          @include trailer(0);
+        }
+
+        ul {
+          margin-left: 0;
+          list-style: none;
+
+          li {
+            display: inline;
+          }
+        }
+      }
+    }
+
     article.writing.exerpt-only, h2, ul {
       @include columns(8, 8);
       @include suffix(0, 8);
@@ -58,14 +89,8 @@ body.home {
       @include leader(1, 42.6667px);
     }
 
-    .archived { visibility: hidden; }
-
     article {
       p { @include leader(1); }
-    }
-
-    ul {
-      @include leader(1);
     }
   }
 
