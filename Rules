@@ -21,7 +21,7 @@ preprocess do
     # Generate default sitemap
     @items << Nanoc3::Item.new(
       "<%= xml_sitemap %>",
-      { :extension => 'xml' },
+      { :extension => 'xml', :is_hidden => true },
       '/sitemap/'
     )
   end
