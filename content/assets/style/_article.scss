@@ -14,14 +14,10 @@ body.article {
         @include padding-trailer(1, 41.9px);
       }
 
-      date, address {
+      time, address {
         @include columns(3, 12);
         @include prefix(1, 12);
         @include omega(12);
-      }
-
-      date {
-        //@include leader(1);
       }
 
       .summary {
