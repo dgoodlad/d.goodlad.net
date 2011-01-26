@@ -60,8 +60,15 @@ body.home {
 
           li {
             display: inline;
+            a, a:visited {
+              color: lighten(desaturate($alt, 90%), 30%);
+            }
           }
         }
+      }
+
+      &:hover nav a, &:hover nav a:visited {
+        color: $alt;
       }
     }
 
