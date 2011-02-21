@@ -31,13 +31,13 @@ author_uri: http://d.goodlad.net/
 # can always manually create a content file with the exact contents
 # you need.
 robots:
-  default: true # disallow assets, allow assets/images and point at sitemap
-  # disallow:
-  #   - '/tag'
-  #   - '/newsletter'
-  # allow:
-  #   - '/tag/foo'
-  # sitemap: '/site-map.txt'
+  default: false # disallow assets, allow assets/images and point at sitemap
+  disallow:
+    - '/apache.conf'
+    - '/assets'
+  allow:
+    - '/assets/images'
+  sitemap: '/sitemap.xml'
 
 # Set up authentication files for various webmaster tools (or something
 # similar). This simply creates a plain text file when generating the site.
