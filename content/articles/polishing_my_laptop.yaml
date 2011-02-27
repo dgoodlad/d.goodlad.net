@@ -1,0 +1,9 @@
+kind: "article"
+created_at: "2008-03-14"
+old_permalink: "/2008/3/14/polishing-my-laptop"
+title: "Polishing My Laptop"
+hide_exerpt: true
+exerpt: |
+  After the big switch last year, I have been thinking hard about how to improve
+  my X11 environment. I’ve finally taken the plunge and installed the latest
+  beta of Ubuntu Hardy Heron, and along with it, dropped most of gnome.
