@@ -1,0 +1,10 @@
+kind: "article"
+created_at: "2008-03-14"
+old_permalink: "/2008/3/14/suspend-hibernate-on-lenovo-t61"
+title: "Suspend/Hibernate on Lenovo T61"
+hide_exerpt: true
+exerpt: |
+  In Ubuntu 7.10, I had suspend working fine while using the nvidia proprietary
+  driver. However, this stopped working when I installed the latest beta of
+  Ubuntu Hardy Heron. I discovered that it was due to some invalid assumptions
+  in the hal-info package.
