@@ -1,0 +1,8 @@
+kind: "article"
+created_at: "2011-06-17"
+title: "Home File Server Using FreeNAS 8"
+exerpt: |
+  Many people buy commercial consumer NAS enclosures to store their files. I
+  wanted something with a bit more flexibilty, but on a similar budget. I put
+  together a FreeNAS 8-based NAS for about $600 (AUD) plus hard drives and
+  thought I'd share the details!
