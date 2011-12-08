@@ -37,6 +37,7 @@ robots:
     - '/assets'
   allow:
     - '/assets/images'
+    - '/assets/style'
   sitemap: '/sitemap.xml'
 
 # Set up authentication files for various webmaster tools (or something
