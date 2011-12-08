@@ -1,0 +1,11 @@
+kind: "article"
+created_at: "2011-12-08"
+title: "Arch Linux on a Macbook Air 4,2"
+exerpt: |
+  Installing linux on a laptop, especially an Apple laptop, can be a
+  frustrating experience. While the initial setup still isn't trivial,
+  a pure EFI-boot copy of Arch Linux is by far the most straightforward install
+  I've done. No mucking around with BIOS/MBR, experimental Xorg drivers,
+  unstable binary-blob Wifi drivers, or complex suspend/resume scripts is
+  required!
+
