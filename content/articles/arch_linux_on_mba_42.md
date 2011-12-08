@@ -4,6 +4,9 @@ This describes an Arch Linux install, not Ubuntu, and doesn't use the typical
 BIOS compatibility mode suggested in most linux-on-Macbook guides. As such, you
 shouldn't expect a point-and-click install.
 
+This document is a work-in-progress, but will get you around the few small issues
+that are specific to this laptop.
+
 1. Preparation
     1. Download the most recent `archboot` ISO
     2. Write the ISO to a USB stick using `dd`
@@ -15,8 +18,8 @@ shouldn't expect a point-and-click install.
     4. Install grub2 as bootloader, manually copying to the EFI system partition
     5. Reboot into the new system; display will be incorrect resolution - don't fret!
 3. Install a new kernel
-    9. Download and configure `linux-3.1.1` source, and apply i915 resolution patch
-    10. Compile and install new kernel
+    1. Download and configure `linux-3.1.1` source, and apply i915 resolution patch
+    2. Compile and install new kernel
 4. Post-install: Xorg, etc.
 
 ## Preparation
@@ -71,7 +74,7 @@ This is the easy part: just hold down the `option` key before the apple logo
 appears on the gray firmware boot screen. Using arrow keys (or the mouse),
 choose the USB stick which will be mis-labeled "Windows".
 
-_TODO_ GRUB menu choice
+GRUB will start up; choose the normal kernel.
 
 ### Partition hard drive using `cgdisk`
 
@@ -91,12 +94,7 @@ Don't let Arch do any partitioning of its own; instead, just move on and
 choose the partitions that you've already created and tell the script where to
 mount them.
 
-_TODO_ run through the steps!
-
 ### Install GRUB2 to EFI System Partition
-
-_TODO_ verify 'grub2' option name
-_TODO_ verify that /boot/efi/EFI/grub is automatically intalled
 
 When you get to the bootloader question, make sure to choose `grub2`. The
 script will fail to fully install it, complaining about the EFI system
@@ -137,11 +135,31 @@ includes a hardcoded set of timings, overriding what the driver (improperly)
 detects.
 
 Follow the process on the Arch Wiki page
-[Kernel Compilation without ABS](https://wiki.archlinux.org/index.php/Kernel_Compilation_without_ABS), with a couple of small changes.
+[Kernel Compilation without ABS](https://wiki.archlinux.org/index.php/Kernel_Compilation_without_ABS),
+with the following small changes:
 
 ### Patch the i915 driver
 
-_TODO_ describe the patch from the Ubuntu forums
+You'll need to patch the `i915` driver with the display timings appropriate
+for your machine. There are, at this time, five known panels in the Macbook
+Air 4,1 and 4,2 models. There is an Ubuntu-specific script that contains all
+of the modelines, but requires `apt` to install the `get-edid` utility which
+will identify your display.
+
+If you don't already know which panel your machine has, you have two choices.
+Either install `get-edid` yourself, and follow along with the `fix-i915.sh`
+script by hand, or run the following in OSX:
+
+```
+ioreg -lw0 | grep IODisplayEDID | sed "/[^<]*</s///" | xxd -p -r | strings -6
+```
+
+Once you know which panel model you have, download the `fix-i915.sh` script
+from [http://www.almostsure.com/mba42/fix-i915.sh](http://www.almostsure.com/mba42/fix-i915.sh),
+and apply the patch within with the appropriate modeline for your panel.
+
+_NOTE_ If enough people have trouble with this, I may wrap it up in an Arch-
+specific script.
 
 ### Configure and compile
 
