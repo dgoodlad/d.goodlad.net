@@ -169,10 +169,17 @@ not new enough to support hack-less Time Machine backups. You can make it work,
 but it's ugly and unstable. The FreeBSD ports system doesn't have any of the
 netatalk-2.2 betas available, so it looks like I'll likely have to write my own.
 
+*UPDATE*: The most recent version of FreeNAS, 8.0.2-RELEASE, includes an updated
+version of `netatalk`. It supports the features required by Lion for
+out-of-the-box Time Machine support.
+
 ### SABnzbd, Sick Beard and Couch Potato
 
 I use these tools to acquire video from usenet. I'm considering moving these
 from my Mac Mini to the file server, but have yet to decide if I'll do so.
 
+*UPDATE*: I have installed all of these, and they're running nicely. There
+are a number of people on the FreeNAS forums who have done so and documented
+their experiences.
 
 
