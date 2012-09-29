@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'rack'
 gem 'adsf'
-gem 'nanoc3', '~> 3.1.6'
+gem 'nanoc', '~> 3.4.1'
 gem 'compass-susy-plugin', '~> 0.8.1'
 gem 'rdiscount', '~> 1.6'
 gem 'builder'
