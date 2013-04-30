@@ -1,5 +1,6 @@
-source :rubygems
+source 'https://rubygems.org'
 
+gem 'rake'
 gem 'rack'
 gem 'adsf'
 gem 'nanoc', '~> 3.4.1'
