@@ -67,7 +67,7 @@ gauges_site_id: '517fb990f5a1f525c700003d'
 # already there and replace it with the contents of the /output directory.
 deploy:
   default:
-    dst: "d.goodlad.net:/srv/www/d.goodlad.net/public"
+    dst: "dave@cloud1.goodlad.net:/srv/www/d.goodlad.net/public"
     options: ['-glpPrtvz', '--delete']
 #  staging:
 #    dst: "host:path"
